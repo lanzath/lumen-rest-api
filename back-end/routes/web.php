@@ -17,10 +17,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix' => 'api/v1', 'namespace' => 'Movie'], function () use ($router) {
-    $router->get('/movies', 'MovieController@index');
-    $router->post('movies', 'MovieController@store');
-    $router->get('/movie/{id}', 'MovieController@show');
-    $router->put('/movie/{id}', 'MovieController@update');
-    $router->delete('/movie/{id}', 'MovieController@destroy');
+$router->group(['prefix' => 'api/v1', 'namespace' => ''], function () use ($router) {
+    //
 });
